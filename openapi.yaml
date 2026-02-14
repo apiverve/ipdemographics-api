@@ -1,0 +1,88 @@
+openapi: 3.0.4
+info:
+  title: IP Demographics
+  description: >-
+    IP Demographics combines IP geolocation with Census demographic data to
+    provide demographic information for any IP address. Get location, income,
+    education, and housing data based on the IP's geographic location.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/ipdemographics:
+    get:
+      summary: Get IP Demographics
+      description: Get location and demographic data for an IP address
+      operationId: ipdemographics
+      parameters:
+        - name: ip
+          in: query
+          schema:
+            type: string
+          required: true
+          description: IPv4 or IPv6 address
+          example: 173.172.81.20
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  ip: 8.8.8.8
+                  location:
+                    zip: '94043'
+                    city: Mountain View
+                    state: California
+                    stateCode: CA
+                    country: United States
+                    countryCode: US
+                    latitude: 37.4056
+                    longitude: -122.0775
+                    timezone: America/Los_Angeles
+                  demographics:
+                    population: 81234
+                    medianAge: 34.5
+                    medianHouseholdIncome: 142567
+                    perCapitaIncome: 78234
+                    medianHomeValue: 1875000
+                    collegeEducatedPct: 68.3
+                    unemploymentRate: 3.2
+                    homeOwnershipRate: 45.6
+                  acsYear: 2022
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
