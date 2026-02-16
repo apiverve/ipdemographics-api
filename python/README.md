@@ -238,8 +238,9 @@ from apiverve_ipdemographics.apiClient import IpdemographicsAPIClient
 
 api = IpdemographicsAPIClient("[YOUR_API_KEY]")
 
+query = { "ip": "8.8.8.8" }
+
 try:
-    query = { "ip": "8.8.8.8" }
     result = api.execute(query)
     print(result)
 finally:
