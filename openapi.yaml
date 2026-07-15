@@ -72,6 +72,10 @@ paths:
                     unemploymentRate: 3.2
                     homeOwnershipRate: 45.6
                   acsYear: 2022
+                  formatted:
+                    medianHouseholdIncome: $142,567
+                    perCapitaIncome: $78,234
+                    medianHomeValue: $1,875,000
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
