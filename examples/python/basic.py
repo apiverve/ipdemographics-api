@@ -17,11 +17,14 @@ def call_ipdemographics_api():
     Make a GET request to the IP Demographics API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;ip&#x27;: &#x27;173.172.81.20&#x27;}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
