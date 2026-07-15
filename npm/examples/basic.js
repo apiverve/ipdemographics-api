@@ -15,7 +15,7 @@ const api = new ipdemographicsAPI({
 
 // Example query
 var query = {
-  ip: "8.8.8.8"
+  ip: "173.172.81.20"
 };
 
 // Make the API request using callback
