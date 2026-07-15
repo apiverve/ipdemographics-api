@@ -60,7 +60,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  ip: "8.8.8.8"
+  ip: "173.172.81.20"
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +80,7 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  ip: "8.8.8.8"
+  ip: "173.172.81.20"
 };
 
 api.execute(query)
@@ -101,7 +101,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  ip: "8.8.8.8"
+  ip: "173.172.81.20"
 };
 
     try {
@@ -144,7 +144,12 @@ async function makeRequest() {
       "unemploymentRate": 3.2,
       "homeOwnershipRate": 45.6
     },
-    "acsYear": 2022
+    "acsYear": 2022,
+    "formatted": {
+      "medianHouseholdIncome": "$142,567",
+      "perCapitaIncome": "$78,234",
+      "medianHomeValue": "$1,875,000"
+    }
   }
 }
 ```
