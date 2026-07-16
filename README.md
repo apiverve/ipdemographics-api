@@ -191,11 +191,55 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the IP Demographics API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "ip": "8.8.8.8",
+    "location": {
+      "zip": "94043",
+      "city": "Mountain View",
+      "state": "California",
+      "stateCode": "CA",
+      "country": "United States",
+      "countryCode": "US",
+      "latitude": 37.4056,
+      "longitude": -122.0775,
+      "timezone": "America/Los_Angeles"
+    },
+    "demographics": {
+      "population": 81234,
+      "medianAge": 34.5,
+      "medianHouseholdIncome": 142567,
+      "perCapitaIncome": 78234,
+      "medianHomeValue": 1875000,
+      "collegeEducatedPct": 68.3,
+      "unemploymentRate": 3.2,
+      "homeOwnershipRate": 45.6
+    },
+    "acsYear": 2022,
+    "formatted": {
+      "medianHouseholdIncome": "$142,567",
+      "perCapitaIncome": "$78,234",
+      "medianHomeValue": "$1,875,000"
+    }
+  }
 }
 ```
 
