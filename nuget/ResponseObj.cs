@@ -25,6 +25,9 @@ namespace APIVerve.API.IPDemographics
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,40 +42,55 @@ namespace APIVerve.API.IPDemographics
         public Demographics Demographics { get; set; }
 
         [JsonProperty("acsYear")]
-        public long AcsYear { get; set; }
+        public long? AcsYear { get; set; }
+
+        [JsonProperty("formatted")]
+        public Formatted Formatted { get; set; }
     }
 
     public partial class Demographics
     {
         [JsonProperty("population")]
-        public long Population { get; set; }
+        public long? Population { get; set; }
 
         [JsonProperty("medianAge")]
-        public double MedianAge { get; set; }
+        public double? MedianAge { get; set; }
 
         [JsonProperty("medianHouseholdIncome")]
-        public long MedianHouseholdIncome { get; set; }
+        public long? MedianHouseholdIncome { get; set; }
 
         [JsonProperty("perCapitaIncome")]
-        public long PerCapitaIncome { get; set; }
+        public long? PerCapitaIncome { get; set; }
 
         [JsonProperty("medianHomeValue")]
-        public long MedianHomeValue { get; set; }
+        public long? MedianHomeValue { get; set; }
 
         [JsonProperty("collegeEducatedPct")]
-        public double CollegeEducatedPct { get; set; }
+        public double? CollegeEducatedPct { get; set; }
 
         [JsonProperty("unemploymentRate")]
-        public double UnemploymentRate { get; set; }
+        public double? UnemploymentRate { get; set; }
 
         [JsonProperty("homeOwnershipRate")]
-        public double HomeOwnershipRate { get; set; }
+        public double? HomeOwnershipRate { get; set; }
+    }
+
+    public partial class Formatted
+    {
+        [JsonProperty("medianHouseholdIncome")]
+        public string MedianHouseholdIncome { get; set; }
+
+        [JsonProperty("perCapitaIncome")]
+        public string PerCapitaIncome { get; set; }
+
+        [JsonProperty("medianHomeValue")]
+        public string MedianHomeValue { get; set; }
     }
 
     public partial class Location
     {
         [JsonProperty("zip")]
-        public long Zip { get; set; }
+        public long? Zip { get; set; }
 
         [JsonProperty("city")]
         public string City { get; set; }
@@ -90,12 +108,24 @@ namespace APIVerve.API.IPDemographics
         public string CountryCode { get; set; }
 
         [JsonProperty("latitude")]
-        public double Latitude { get; set; }
+        public double? Latitude { get; set; }
 
         [JsonProperty("longitude")]
-        public double Longitude { get; set; }
+        public double? Longitude { get; set; }
 
         [JsonProperty("timezone")]
         public string Timezone { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
