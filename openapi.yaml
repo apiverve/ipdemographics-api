@@ -5,6 +5,8 @@ info:
     IP Demographics combines IP geolocation with Census demographic data to
     provide demographic information for any IP address. Get location, income,
     education, and housing data based on the IP's geographic location.
+    Demographics cover US ZIP codes; other locations return the location with
+    demographics set to null.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +21,7 @@ servers:
 paths:
   /v1/ipdemographics:
     get:
-      summary: Get IP Demographics
+      summary: IP Demographics
       description: Get location and demographic data for an IP address
       operationId: ipdemographics
       parameters:
