@@ -1,6 +1,6 @@
 # IP Demographics API - PHP Package
 
-IP Demographics combines IP geolocation with Census demographic data to provide demographic information for any IP address. Get location, income, education, and housing data based on the IP's geographic location.
+IP Demographics combines IP geolocation with Census demographic data to provide demographic information for any IP address. Get location, income, education, and housing data based on the IP's geographic location. Demographics cover US ZIP codes; other locations return the location with demographics set to null.
 
 ## Installation
 
@@ -108,11 +108,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/ipdemographics?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/ipdemographics?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/ipdemographics?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/ipdemographics?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/ipdemographics?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/ipdemographics?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
