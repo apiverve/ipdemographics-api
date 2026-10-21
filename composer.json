@@ -1,7 +1,7 @@
 {
     "name": "apiverve/ipdemographics",
-    "description": "IP Demographics combines IP geolocation with Census demographic data to provide demographic information for any IP address. Get location, income, education, and housing data based on the IP's geographic location.",
-    "version": "1.2.0",
+    "description": "IP Demographics combines IP geolocation with Census demographic data to provide demographic information for any IP address. Get location, income, education, and housing data based on the IP's geographic location. Demographics cover US ZIP codes; other locations return the location with demographics set to null.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -21,7 +21,7 @@
         "ip to demographics",
         "visitor demographics"
     ],
-    "homepage": "https://apiverve.com/marketplace/ipdemographics?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/ipdemographics?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/ipdemographics",
