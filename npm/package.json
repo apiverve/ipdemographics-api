@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/ipdemographics",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "IP Demographics combines IP geolocation with Census demographic data to provide demographic information for any IP address. Get location, income, education, and housing data based on the IP's geographic location. Demographics cover US ZIP codes; other locations return the location with demographics set to null.",
   "main": "index.js",
   "types": "index.d.ts",
