@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// IP Demographics API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/ipdemographics?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/ipdemographics?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [ip] (required) - IPv4 or IPv6 address [format: ip]
